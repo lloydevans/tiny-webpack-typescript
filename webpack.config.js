@@ -38,6 +38,10 @@ module.exports = (env = {}) => {
             ],
         },
 
+        resolve: {
+            extensions: ['.tsx', '.ts', '.js', '.css'],
+        },
+
         plugins: [
             // Auto generate HTML
             new HtmlWebpackPlugin(),
