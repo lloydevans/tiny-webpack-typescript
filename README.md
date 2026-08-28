@@ -15,6 +15,7 @@ A tiny template for TypeScript + webpack projects: strict TypeScript, CSS suppor
 | `npm run build`      | Development build to `build/`                |
 | `npm run build-prod` | Minified production build to `build/`        |
 | `npm run typecheck`  | Type-check without emitting                  |
+| `npm run lint`       | Lint with ESLint (warnings fail)             |
 | `npm test`           | Run unit tests once                          |
 | `npm run test-watch` | Run unit tests in watch mode                 |
 

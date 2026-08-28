@@ -9,6 +9,7 @@
         "build": "npx --no-install webpack",
         "build-prod": "npm run build -- --env prod=true",
         "typecheck": "npx --no-install tsc --noEmit",
+        "lint": "npx --no-install eslint . --max-warnings 0",
         "test": "npx --no-install vitest run",
         "test-watch": "npx --no-install vitest"
     },
@@ -16,11 +17,15 @@
         "tslib": "^2.8.1"
     },
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "css-loader": "7.1.4",
+        "eslint": "^10.8.0",
+        "globals": "^16.0.0",
         "html-webpack-plugin": "^5.6.8",
         "style-loader": "4.0.0",
         "ts-loader": "^9.6.2",
         "typescript": "^6.0.3",
+        "typescript-eslint": "^8.67.0",
         "vitest": "^4.1.11",
         "webpack": "^5.109.0",
         "webpack-cli": "^7.2.2",

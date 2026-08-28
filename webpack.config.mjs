@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = (env = {}) => {
+export default (env = {}) => {
     /**
      * Build options.
      */
@@ -10,12 +10,12 @@ module.exports = (env = {}) => {
     /**
      * @type {import("webpack").Configuration}
      */
-    let config = {
+    const config = {
         entry: './src/index.ts',
 
         output: {
             filename: 'bundle.js',
-            path: path.join(__dirname, 'build'),
+            path: path.join(import.meta.dirname, 'build'),
             clean: true,
         },
 
