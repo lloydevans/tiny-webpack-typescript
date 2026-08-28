@@ -7,6 +7,10 @@ node_modules/
 # Test coverage
 coverage/
 
+# Mutation testing
+reports/
+.stryker-tmp/
+
 # TypeScript cache
 *.tsbuildinfo
 

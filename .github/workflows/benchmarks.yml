@@ -1,15 +1,13 @@
-name: CI
+name: Benchmarks
 
 on:
-  push:
-    branches: [master]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  verify:
+  mutation-bench:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -18,4 +16,4 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run verify-gate
+      - run: npm run mutation-bench
