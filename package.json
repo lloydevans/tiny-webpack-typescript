@@ -13,13 +13,16 @@
 		"format": "npx --no-install prettier . --write",
 		"format-check": "npx --no-install prettier . --check",
 		"test": "npx --no-install vitest run",
-		"test-watch": "npx --no-install vitest"
+		"test-watch": "npx --no-install vitest",
+		"mutation": "npx --no-install stryker run"
 	},
 	"dependencies": {
 		"tslib": "^2.8.1"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
+		"@stryker-mutator/core": "^10.0.0",
+		"@stryker-mutator/vitest-runner": "^10.0.0",
 		"css-loader": "7.1.4",
 		"eslint": "^10.8.0",
 		"globals": "^16.0.0",
