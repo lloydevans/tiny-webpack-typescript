@@ -20,6 +20,7 @@ A tiny template for TypeScript + webpack projects: strict TypeScript, CSS suppor
 | `npm run format-check` | Check formatting without writing            |
 | `npm test`             | Run unit tests once                         |
 | `npm run mutation`     | Mutation testing with Stryker               |
+| `npm run verify-gate`  | Run the full CI gate locally                |
 | `npm run test-watch`   | Run unit tests in watch mode                |
 
 ## Notes
