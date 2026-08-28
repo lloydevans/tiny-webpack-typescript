@@ -2,15 +2,12 @@ name: Bench
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: [labeled]
 
 permissions:
   contents: read
 
 jobs:
   mutation-bench:
-    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'bench'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
