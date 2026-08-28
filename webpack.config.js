@@ -44,7 +44,7 @@ module.exports = (env = {}) => {
 
         plugins: [
             // Auto generate HTML
-            new HtmlWebpackPlugin(),
+            new HtmlWebpackPlugin({ title: 'tiny-webpack-typescript' }),
         ],
 
         mode: env.prod ? 'production' : 'development',
