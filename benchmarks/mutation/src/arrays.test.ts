@@ -34,6 +34,13 @@ describe("zip", () => {
 		]);
 		expect(zip([], ["a"])).toEqual([]);
 	});
+	it("keeps undefined as a legitimate element value", () => {
+		expect(zip([1, undefined, 3], ["a", "b", "c"])).toEqual([
+			[1, "a"],
+			[undefined, "b"],
+			[3, "c"],
+		]);
+	});
 });
 
 describe("partition", () => {

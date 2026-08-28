@@ -26,7 +26,7 @@ A tiny template for TypeScript projects: strict TypeScript, ESLint and Prettier 
 
 ## Benchmarks
 
-`benchmarks/` holds on-demand automated benchmark workloads, one per subfolder, excluded from the default test and mutation runs and from the CI gate; run them manually via the Benchmarks workflow (workflow_dispatch) or locally.
+`benchmarks/` holds on-demand automated benchmark workloads, one per subfolder. Their tests and mutants are excluded from the default test and mutation runs, so the CI gate lints, formats, and type-checks this code but never executes it; run the workloads manually via the Benchmarks workflow (workflow_dispatch) or locally.
 
 | Benchmark              | Command                  | Description                                                                                                                                              |
 | ---------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

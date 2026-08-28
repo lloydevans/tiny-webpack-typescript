@@ -21,14 +21,7 @@ export function range(start: number, end: number, step = 1): number[] {
 }
 
 export function zip<A, B>(left: readonly A[], right: readonly B[]): [A, B][] {
-	const result: [A, B][] = [];
-	for (let i = 0; ; i++) {
-		const a = left[i];
-		const b = right[i];
-		if (a === undefined || b === undefined) break;
-		result.push([a, b]);
-	}
-	return result;
+	return left.slice(0, right.length).map((a, i) => [a, right[i] as B]);
 }
 
 export function partition<T>(items: readonly T[], predicate: (item: T) => boolean): [T[], T[]] {
