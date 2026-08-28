@@ -1,6 +1,7 @@
 {
     "name": "tiny-webpack-typescript",
     "version": "0.0.0",
+    "private": true,
     "scripts": {
         "start": "npm run serve",
         "serve": "npx --no-install webpack serve",
