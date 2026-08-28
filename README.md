@@ -1,6 +1,6 @@
 # tiny-webpack-typescript
 
-A tiny template for TypeScript + webpack projects: strict TypeScript, CSS support, dev server with HMR, unit tests with Vitest, and CI out of the box.
+A tiny template for TypeScript projects: strict TypeScript, ESLint and Prettier at their strictest, unit and mutation testing, and CI out of the box. Webpack supplies bundling, CSS support, and a dev server with HMR, but it is a thin, interchangeable layer - the TypeScript tooling is the substance of the template.
 
 ## Requirements
 
@@ -34,5 +34,6 @@ A tiny template for TypeScript + webpack projects: strict TypeScript, CSS suppor
 
 ## Notes
 
+- The bundler is contained in [webpack.config.mjs](webpack.config.mjs), the build scripts, and a handful of devDependencies; swapping it for another bundler leaves the TypeScript, lint, format, test, and CI setup untouched.
 - Targets ES2022; adjust `target` in [tsconfig.json](tsconfig.json) if you need to support older browsers.
 - TypeScript is pinned to the 6.x line because ts-loader depends on the TypeScript programmatic API, which the native TypeScript 7 compiler does not expose yet (expected in 7.1).
