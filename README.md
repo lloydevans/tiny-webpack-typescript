@@ -24,9 +24,13 @@ A tiny template for TypeScript + webpack projects: strict TypeScript, CSS suppor
 | `npm run verify-gate`    | Run the full CI gate locally                |
 | `npm run test-watch`     | Run unit tests in watch mode                |
 
-## Mutation testing benchmark
+## Benchmarks
 
-`bench/` holds a fixed workload (about 45 utility functions, 320 mutants, expected score 100%) for measuring Stryker performance on a machine or CI runner - useful for evaluating runner sizes, concurrency settings, or Stryker upgrades. It is excluded from the default test and mutation runs and from CI; run it on demand with `npm run mutation-bench`.
+`benchmarks/` holds on-demand automated benchmark workloads, one per subfolder, excluded from the default test and mutation runs and from the CI gate; run them manually via the Benchmarks workflow (workflow_dispatch) or locally.
+
+| Benchmark              | Command                  | Description                                                                                                                                              |
+| ---------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `benchmarks/mutation/` | `npm run mutation-bench` | Fixed Stryker workload (about 45 utility functions, 320 mutants, expected score 100%) for measuring mutation testing performance on a machine or runner. |
 
 ## Notes
 

@@ -12,5 +12,5 @@
 		"skipLibCheck": true,
 		"noUncheckedIndexedAccess": true
 	},
-	"include": ["src", "bench", "vitest.config.mts"]
+	"include": ["src", "benchmarks", "vitest.config.mts"]
 }

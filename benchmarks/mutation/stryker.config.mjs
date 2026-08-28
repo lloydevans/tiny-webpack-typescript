@@ -4,9 +4,9 @@
 const config = {
 	testRunner: "vitest",
 	vitest: {
-		configFile: "bench/vitest.config.mts",
+		configFile: "benchmarks/mutation/vitest.config.mts",
 	},
-	mutate: ["bench/src/**/*.ts", "!bench/src/**/*.test.ts"],
+	mutate: ["benchmarks/mutation/src/**/*.ts", "!benchmarks/mutation/src/**/*.test.ts"],
 	thresholds: { high: 80, low: 60, break: null },
 	reporters: ["clear-text", "progress"],
 };
