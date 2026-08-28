@@ -8,16 +8,18 @@ A tiny template for TypeScript + webpack projects: strict TypeScript, CSS suppor
 
 ## Usage
 
-| Command              | Description                                  |
-| -------------------- | -------------------------------------------- |
-| `npm start`          | Dev server with hot reload (localhost:8080)  |
-| `npm run serve-prod` | Dev server with production build             |
-| `npm run build`      | Development build to `build/`                |
-| `npm run build-prod` | Minified production build to `build/`        |
-| `npm run typecheck`  | Type-check without emitting                  |
-| `npm run lint`       | Lint with ESLint (warnings fail)             |
-| `npm test`           | Run unit tests once                          |
-| `npm run test-watch` | Run unit tests in watch mode                 |
+| Command                | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| `npm start`            | Dev server with hot reload (localhost:8080) |
+| `npm run serve-prod`   | Dev server with production build            |
+| `npm run build`        | Development build to `build/`               |
+| `npm run build-prod`   | Minified production build to `build/`       |
+| `npm run typecheck`    | Type-check without emitting                 |
+| `npm run lint`         | Lint with ESLint (warnings fail)            |
+| `npm run format`       | Format all files with Prettier              |
+| `npm run format-check` | Check formatting without writing            |
+| `npm test`             | Run unit tests once                         |
+| `npm run test-watch`   | Run unit tests in watch mode                |
 
 ## Notes
 

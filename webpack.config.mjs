@@ -1,54 +1,54 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default (env = {}) => {
-    /**
-     * Build options.
-     */
-    env = { ...{ prod: false }, ...env };
+	/**
+	 * Build options.
+	 */
+	env = { ...{ prod: false }, ...env };
 
-    /**
-     * @type {import("webpack").Configuration}
-     */
-    const config = {
-        entry: './src/index.ts',
+	/**
+	 * @type {import("webpack").Configuration}
+	 */
+	const config = {
+		entry: "./src/index.ts",
 
-        output: {
-            filename: 'bundle.js',
-            path: path.join(import.meta.dirname, 'build'),
-            clean: true,
-        },
+		output: {
+			filename: "bundle.js",
+			path: path.join(import.meta.dirname, "build"),
+			clean: true,
+		},
 
-        devtool: env.prod ? 'source-map' : 'eval-source-map',
+		devtool: env.prod ? "source-map" : "eval-source-map",
 
-        cache: {
-            type: 'filesystem',
-        },
+		cache: {
+			type: "filesystem",
+		},
 
-        module: {
-            rules: [
-                {
-                    test: /\.css$/i,
-                    use: ['style-loader', 'css-loader'],
-                },
-                {
-                    test: /\.tsx?$/,
-                    loader: 'ts-loader',
-                },
-            ],
-        },
+		module: {
+			rules: [
+				{
+					test: /\.css$/i,
+					use: ["style-loader", "css-loader"],
+				},
+				{
+					test: /\.tsx?$/,
+					loader: "ts-loader",
+				},
+			],
+		},
 
-        resolve: {
-            extensions: ['.tsx', '.ts', '.js', '.css'],
-        },
+		resolve: {
+			extensions: [".tsx", ".ts", ".js", ".css"],
+		},
 
-        plugins: [
-            // Auto generate HTML
-            new HtmlWebpackPlugin({ title: 'tiny-webpack-typescript' }),
-        ],
+		plugins: [
+			// Auto generate HTML
+			new HtmlWebpackPlugin({ title: "tiny-webpack-typescript" }),
+		],
 
-        mode: env.prod ? 'production' : 'development',
-    };
+		mode: env.prod ? "production" : "development",
+	};
 
-    return config;
+	return config;
 };
