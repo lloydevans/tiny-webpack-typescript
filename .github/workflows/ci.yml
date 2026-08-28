@@ -17,7 +17,6 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm i -g npm@12
       - run: npm ci
       - run: npm run lint
       - run: npm run format-check
