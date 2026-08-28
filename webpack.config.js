@@ -5,7 +5,7 @@ module.exports = (env = {}) => {
     /**
      * Build options.
      */
-    env = { ...{ prod: false, modern: false }, ...env };
+    env = { ...{ prod: false }, ...env };
 
     /**
      * @type {import("webpack").Configuration}
@@ -16,9 +16,14 @@ module.exports = (env = {}) => {
         output: {
             filename: 'bundle.js',
             path: path.join(__dirname, 'build'),
+            clean: true,
         },
 
-        devtool: 'source-map',
+        devtool: env.prod ? 'source-map' : 'eval-source-map',
+
+        cache: {
+            type: 'filesystem',
+        },
 
         module: {
             rules: [
@@ -29,11 +34,6 @@ module.exports = (env = {}) => {
                 {
                     test: /\.tsx?$/,
                     loader: 'ts-loader',
-                    options: {
-                        compilerOptions: {
-                            target: env.modern ? 'ES2019' : 'ES5',
-                        },
-                    },
                 },
             ],
         },
@@ -44,7 +44,7 @@ module.exports = (env = {}) => {
 
         plugins: [
             // Auto generate HTML
-            new HtmlWebpackPlugin(),
+            new HtmlWebpackPlugin({ title: 'tiny-webpack-typescript' }),
         ],
 
         mode: env.prod ? 'production' : 'development',
